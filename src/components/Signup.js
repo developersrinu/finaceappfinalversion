@@ -128,6 +128,11 @@ const SignUpSignIn = () => {
                 />
               </div>
 
+
+
+
+              
+
               <div className="input-wrapper">
                 <p>Password</p>
                 <input
