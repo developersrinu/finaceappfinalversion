@@ -1,9 +1,13 @@
 /// firabse
 
-import { initializeApp } from "firebase/app";
-import { getAuth, GoogleAuthProvider } from "firebase/auth";
-import { getFirestore, doc, setDoc } from "firebase/firestore";
 
+
+// Import necessary Firebase modules and functions
+import { initializeApp } from "firebase/app"; // Firebase core module
+import { getAuth, GoogleAuthProvider } from "firebase/auth"; // Authentication module
+import { getFirestore, doc, setDoc } from "firebase/firestore"; // Firestore module
+
+// New Firebase configuration
 // New Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyCvsgeEJ7gly8Jz0l2blcSacCbzYckfND8",
@@ -15,10 +19,17 @@ const firebaseConfig = {
   measurementId: "G-NHRTSZ1C0Y"
 };
 
+// Initialize Firebase with the configuration
 const app = initializeApp(firebaseConfig);
+
+// Get Firestore instance from the initialized Firebase app
 const db = getFirestore(app);
+
+// Get Authentication instance from the initialized Firebase app
 const auth = getAuth(app);
+
+// Create a new GoogleAuthProvider instance for authentication
 const provider = new GoogleAuthProvider();
+
+// Export the initialized Firestore, Authentication, and other functions
 export { db, auth, provider, doc, setDoc };
-
-
